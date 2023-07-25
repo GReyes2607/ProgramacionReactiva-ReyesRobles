@@ -6,7 +6,7 @@ import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } fro
 export class TamaniosDirective implements OnChanges {
 
   @Input()
-  appTamanios = '';
+  appTamanios = '12';
 
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 

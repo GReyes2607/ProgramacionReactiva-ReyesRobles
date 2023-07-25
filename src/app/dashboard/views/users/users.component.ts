@@ -33,16 +33,16 @@ export class UsersComponent {
   onCreateUser(): void {
     const dialogRef = this.matDialog.open(UserFormDialogComponent)
     dialogRef.afterClosed().subscribe({
-      next: (v) => {
-        if (v) {
+      next: (newUser) => {
+        if (newUser) {
           this.users = [
             ...this.users,
             {
               id: this.users.length + 1,
-              name: v.name,
-              surname: v.surname,
-              email: v.email,
-              password: v.password
+              name: newUser.name,
+              surname: newUser.surname,
+              email: newUser.email,
+              password: newUser.password
             }
           ]
         }

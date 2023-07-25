@@ -19,4 +19,12 @@ export class UserTableComponent {
   @Output()
   editUser = new EventEmitter<User>();
 
+  onDeleteUser(userToDelete: User): void{
+    this.deleteUser.emit(userToDelete);
+  }
+
+  onEditUser(userEdit: User): void {
+    this.editUser.emit(userEdit);
+  }
+
 }
